@@ -1,0 +1,10 @@
+<section class="region {% if include.section.classes %}{{ include.section.classes }}{% endif %}" id="section-{{ include.section.title | slugify}}">
+  <div class="inner">
+    {% if include.section.image %}
+      <img class="right" src="{{ site.subpath }}/images/sections/{{ include.section.image.file }}" alt="{{ include.section.image.alt }}" />
+    {% endif %}
+    
+    {% if include.section.title %}<h2 class="title">{{ include.section.title }}</h2>{% endif %}
+    {{ include.section.content }}
+  </div>
+</section>

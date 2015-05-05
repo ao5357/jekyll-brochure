@@ -1,22 +1,12 @@
 ---
 layout: layout
 front: true
-title: Smith and Partners
-regions:
-  cta: true
-  free: true
-  splash: true
-  testimonials: true
 ---
 <section class="region divided highlight" id="home"><div class="inner">
-  <a href="/about/"><img class="right" src="/images/chris2.jpg" alt="Chris" /></a>
-  <h1 class="title">Accounting, Bookkeeping and <br />business services</h1>
-  <p itemprop="description">S&amp;P description goes here.</p>
-  <a class="button cta" href="/about">Learn about FIDO</a>
+  <img class="right" src="images/team.jpg" alt="Our team" />
+  <h1 class="title">{{ site.offering }}</h1>
+  <p itemprop="description">{{ site.offer_description }}</p>
 </div></section>
-<section class="region divided"><div class="inner">
-  <a href="/training/"><img class="right" src="/images/section.jpg" alt="" /></a>
-  <h2 class="title"><a href="/training/">Section</a></h2>
-  <p>A brief description of the section.</p>
-  <a class="button cta" href="/section/">Verb</a>
-</div></section>
+{% for section in site.sections %}
+{% include section.html section=section %}
+{% endfor %}

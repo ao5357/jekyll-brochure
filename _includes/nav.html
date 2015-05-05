@@ -1,12 +1,12 @@
 <nav class="region"><div class="inner">
-{% assign pages = site.autopages | sort:"weight" %}
+{% assign sections = site.sections | sort:"weight" %}
 <ul class="menu">
   <li><a class="first{% if page.url == '/index.html' %} active{% endif %}" href="/">Home</a></li>
-  {% for p in pages %}
-  {% if p.exclude == null %}
+  {% for s in sections %}
+  {% if s.exclude == null %}
   <li>
-    <a {% if p.url == page.url %}class="active"{% endif %} href="{{ p.url }}">
-      {{ p.title }}
+    <a href="#section-{{ s.title | slugify }}">
+      {{ s.title }}
     </a>
   </li>
   {% endif %}

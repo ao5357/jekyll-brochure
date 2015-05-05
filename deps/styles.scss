@@ -1,3 +1,20 @@
 ---
 ---
+
+/* Colors */
+@function hex-add($color, $step) {
+  @return rgb(
+    (red($color) + ($step * 17)),
+    (green($color) + ($step * 17)),
+    (blue($color) + ($step * 17))
+  );
+}
+
+$primary: {{ site.colors.primary }};
+$secondary: {{ site.colors.secondary }};
+$tertiary: {{ site.colors.tertiary }};
+$quarternary: {{ site.colors.quarternary }};
+$text: {{ site.colors.text }};
+$light: {{ site.colors.light }};
+
 {% include_relative working.scss %}

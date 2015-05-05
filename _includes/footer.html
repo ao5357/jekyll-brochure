@@ -1,12 +1,20 @@
 <footer class="region footer"><div class="inner">
   <address class="inline-block" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-    <span itemprop="legalName">{{ site.primary_author }}</span><br>
+    <span>{{ site.primary_author }}</span><br>
     <span itemprop="streetAddress">{{ site.og_street_address }}</span><br>
-    <span itemprop="addressLocality">{{ site.og_locality }}</span>, <span itemprop="addressRegion">{{ site.og_region }}</span> <span itemprop="postalCode">{{ site.og_postal_code }}</span>
+    <span itemprop="addressLocality">{{ site.og_locality }}</span>, 
+    <span itemprop="addressRegion">{{ site.og_region }}</span> 
+    <span itemprop="postalCode">{{ site.og_postal_code }}</span>
   </address>
-  {% include socials.html %}
+  {% if site.social %}
+    <div class="social">
+    {% for link in site.social %}
+      <a href="{{ link.url }}">{{ link.title }}</a>
+    {% endfor %}
+    </div>
+  {% endif %}
 </div></footer>
 <div class="region copyright"><div class="inner">
-  <p>&copy; Copyright {{ site.time | date: '%Y' }} {{ site.title }}, LLC.</p>
-  <p><a href="{{ site.github.repository_url }}">Github source</a></p>
+  <p>&copy; Copyright {{ site.time | date: '%Y' }} {{ site.primary_author }}</p>
+  <p><a href="{{ site.source_repo }}">Github source</a></p>
 </div></div>

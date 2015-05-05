@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="925"
-   height="190"
+   width="650"
+   height="180"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="logo-mark.svg">
+   sodipodi:docname="New document 1">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -24,21 +24,21 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="602.13387"
-     inkscape:cy="13.244926"
+     inkscape:zoom="0.35"
+     inkscape:cx="-178.5"
+     inkscape:cy="-302.90107"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1597"
-     inkscape:window-height="834"
-     inkscape:window-x="2040"
-     inkscape:window-y="36"
-     inkscape:window-maximized="0"
-     fit-margin-top="0.1"
-     fit-margin-left="0.1"
-     fit-margin-right="0.1"
-     fit-margin-bottom="0.1" />
+     fit-margin-top="2.4"
+     fit-margin-left="0.5"
+     fit-margin-right="0.5"
+     fit-margin-bottom="2.6"
+     inkscape:window-width="1364"
+     inkscape:window-height="739"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -47,6 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -54,92 +55,68 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-97.636001,-236.05515)">
+     transform="translate(-53.500002,-55.175348)">
     <g
-       id="g3003"
-       transform="translate(18,-8)">
+       id="g3771"
+       transform="translate(12,-6)">
       <path
-         transform="matrix(0.7482815,0,0,0.70732414,67.73459,83.831308)"
-         d="m 268.57142,362.36218 c 0,65.48519 -50.52786,118.57143 -112.85714,118.57143 -62.329278,0 -112.85714,-53.08624 -112.85714,-118.57143 0,-65.48519 50.527862,-118.57142 112.85714,-118.57142 62.32928,0 112.85714,53.08623 112.85714,118.57142 z"
-         sodipodi:ry="118.57143"
-         sodipodi:rx="112.85714"
-         sodipodi:cy="362.36218"
-         sodipodi:cx="155.71428"
+         transform="matrix(0.9516129,0,0,1,5.059908,0)"
+         d="m 228.57143,149.50504 c 0,44.18278 -39.65478,80 -88.57143,80 -48.916648,0 -88.571426,-35.81722 -88.571426,-80 0,-44.18278 39.654778,-80.000005 88.571426,-80.000005 48.91665,0 88.57143,35.817225 88.57143,80.000005 z"
+         sodipodi:ry="80"
+         sodipodi:rx="88.571426"
+         sodipodi:cy="149.50504"
+         sodipodi:cx="140"
          id="path2985"
-         style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:5.49817085;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:#4d4d4d;stroke:none"
          sodipodi:type="arc" />
       <flowRoot
-         transform="translate(78.286823,4.5456865)"
-         style="font-size:170px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Gentium;-inkscape-font-specification:Gentium Bold"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
          id="flowRoot3755"
          xml:space="preserve"><flowRegion
            id="flowRegion3757"><rect
-             style="font-size:170px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Gentium;-inkscape-font-specification:Gentium Bold"
-             y="248.78583"
-             x="78.286819"
-             height="244.45692"
-             width="120.20815"
+             style="fill:#ffffff"
+             y="95.219322"
+             x="85.714287"
+             height="105.71429"
+             width="94.285713"
              id="rect3759" /></flowRegion><flowPara
-           style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Gentium;-inkscape-font-specification:Gentium Bold"
-           id="flowPara3761">&amp;</flowPara></flowRoot>      <flowRoot
-         transform="translate(24.243661,-29.7995)"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Gentium;-inkscape-font-specification:Gentium"
+           id="flowPara3761"></flowPara></flowRoot>      <flowRoot
+         transform="translate(22,-16)"
+         style="font-size:96px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
          id="flowRoot3763"
          xml:space="preserve"><flowRegion
            id="flowRegion3765"><rect
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gentium;-inkscape-font-specification:Gentium"
-             y="292.22238"
-             x="97.479721"
-             height="87.378204"
-             width="53.033009"
+             style="font-size:96px"
+             y="100.93361"
+             x="88.571426"
+             height="228.57143"
+             width="191.42857"
              id="rect3767" /></flowRegion><flowPara
-           style="font-size:72px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Gentium Book Basic;-inkscape-font-specification:Gentium Book Basic Bold"
-           id="flowPara3769">S</flowPara></flowRoot>      <flowRoot
-         transform="translate(55.55839,-17.67767)"
-         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-         id="flowRoot3771"
-         xml:space="preserve"><flowRegion
-           id="flowRegion3773"><rect
-             y="335.65897"
-             x="67.175148"
-             height="91.4188"
-             width="52.527931"
-             id="rect3775" /></flowRegion><flowPara
-           style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gentium Book Basic;-inkscape-font-specification:Gentium Book Basic"
-           id="flowPara3777">P</flowPara></flowRoot>      <text
-         sodipodi:linespacing="125%"
-         id="text3806"
-         y="342.73004"
-         x="293.26657"
-         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-         xml:space="preserve"><tspan
-           style="font-size:96px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gentium Book Basic;-inkscape-font-specification:Gentium Book Basic"
-           y="342.73004"
-           x="293.26657"
-           id="tspan3808"
-           sodipodi:role="line">Smith &amp; Partners</tspan></text>
-      <flowRoot
-         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-         id="flowRoot3810"
-         xml:space="preserve"><flowRegion
-           id="flowRegion3812"><rect
-             y="356.64789"
-             x="298.57144"
-             height="42.857143"
-             width="685.71429"
-             id="rect3814" /></flowRegion><flowPara
-           id="flowPara3816">AcA</flowPara></flowRoot>      <text
-         sodipodi:linespacing="125%"
-         id="text3818"
-         y="395.50504"
-         x="297.14285"
-         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-         xml:space="preserve"><tspan
-           style="font-size:48px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Lato;-inkscape-font-specification:Lato Bold Italic"
-           y="395.50504"
-           x="297.14285"
-           id="tspan3820"
-           sodipodi:role="line">business services</tspan></text>
-    </g>
-  </g>
+           style="font-size:96px;fill:#ffffff"
+           id="flowPara3769">L</flowPara></flowRoot>    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:84px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="256"
+       y="126.6479"
+       id="text3782"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3784"
+         x="256"
+         y="126.6479"
+         style="font-size:84px;font-weight:bold;-inkscape-font-specification:Sans Bold">Company</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3786"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(10,6)"><flowRegion
+         id="flowRegion3788"><rect
+           id="rect3790"
+           width="465.71429"
+           height="65.714279"
+           x="242.85715"
+           y="160.93361" /></flowRegion><flowPara
+         id="flowPara3792"
+         style="font-size:50px;font-style:italic;-inkscape-font-specification:Sans Italic">This is our slogan</flowPara></flowRoot>  </g>
 </svg>

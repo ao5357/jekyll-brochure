@@ -7,24 +7,18 @@ rdiscount:
 sass:
   style: :compressed
 gems:
-  - jemoji
+  - jekyll-sitemap
 
 ## Site structure
 collections:
   testimonials:
     output: true
     permalink: /testimonials/:title/
-  autopages:
-    output: true
+  sections:
+    output: false
     permalink: /:title/
 
 defaults:
-  -
-    scope:
-      path: ""
-      type: "autopages"
-    values:
-      layout: "autopage"
   -
     scope:
       path: ""
@@ -32,18 +26,51 @@ defaults:
     values:
       layout: "testimonial"
 
-## Basic site info
-title: Smith and Partners
-primary_author: "Smith and Partners, LLC."
-shortname: Smith
-baseurl: http://www.smith-and-partners.com
-email: info@smith-and-partners.com 
-phone: (248) 957-1080
-# gaid: UA-12803971-1
+## Basic company info
+title: Company
+primary_author: "Company, Inc."
+shortname: Comp
+tagline: "Serving ours customers' needs"
+offering: "Business and corporate services"
+offer_description: "We do a lot of stuff. This is a lengthy paragraph of text."
+
+## Site and contact bits
+baseurl: "http://www.example.com"
+# subpath should include leading slash or be an empty string
+subpath: '/jekyll-brochure'
+source_repo: http://www.github.com/ao5357/jekyll-brochure
+email: ao5357@gmail.com 
+phone: (555) 555-1234
+phonedigits: "5555551234"
+# gaid: UA-697953-3
+
+## schema.org type (default for site, often "Website")
+schema: LocalBusiness
 
 ## Open Graph
-og_street_address: 25727 Castlereigh Dr
-og_locality: Farmington Hills
+og_street_address: 123 Fake St
+og_locality: Noncity
 og_region: MI
-og_postal_code: "48336"
+og_postal_code: "48888"
 og_country: USA
+
+## Social links
+social:
+  -
+    title: Facebook
+    url: https://www.facebook.com/buyexamplebusiness
+  -
+    title: Twitter
+    url: https://twitter.com/example
+
+## Colors
+# Secondary especially should not be a regular blue
+# Text should be close to black, but not black (or dark gray)
+# Light is typically #fff, but could be a non-white very light tint
+colors:
+  primary: "#014"
+  secondary: "#f41"
+  tertiary: "#7c1"
+  quarternary: "#04f"
+  text: "#002"
+  light: "#fff"
