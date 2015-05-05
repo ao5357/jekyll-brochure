@@ -1,14 +1,14 @@
 <div class="testimonial-brief">
   {% if include.testimonial.image %}
-    <a href="{{ include.testimonial.url }}">
+    <a href="{{ site.subpath }}{{ include.testimonial.url }}">
       <img class="testimonial-image" src="{{ site.subpath }}/images/testimonials/{{ include.testimonial.image }}" alt="{{ include.testimonial.title }}" />
     </a>
   {% else %}
-    <a href="{{ include.testimonial.url }}">
+    <a href="{{ site.subpath }}{{ include.testimonial.url }}">
       <img class="testimonial-image" src="{{ site.subpath }}/images/testimonials/default.jpg" alt="{{ include.testimonial.title }}" />
     </a>
   {% endif %}
-  <h2>&#8220;<a href="{{ include.testimonial.url }}">{{ include.testimonial.tagline }}</a>&#8221;</h2>
+  <h2>&#8220;<a href="{{ site.subpath }}{{ include.testimonial.url }}">{{ include.testimonial.tagline }}</a>&#8221;</h2>
   <p class="testimonial-content">{{ include.testimonial.content | strip_html | truncatewords: 12 }}</p>
-  <p class="testimonial-signed"><a href="{{ include.testimonial.url }}">{{ include.testimonial.title }}</a></p>
+  <p class="testimonial-signed"><a href="{{ site.subpath }}{{ include.testimonial.url }}">{{ include.testimonial.title }}</a></p>
 </div>
