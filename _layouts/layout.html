@@ -26,7 +26,7 @@ layout: compress
   <meta property="og:description" content="{{ content | strip_html | strip_newlines | replace: '  ', ' ' | truncate: 155, '' }}" />
 {% endif %}
 <link rel="canonical" href="{{ site.baseurl }}{{ site.subpath }}{{ page.url }}" />
-<link rel="stylesheet" type="text/css" href="/deps/styles.css" />
+<link rel="stylesheet" type="text/css" href="{{ site.subpath }}/deps/styles.css" />
 </head><body class="page-{{ page.url | slugify }}">
   {% if site.gaid %}{% include analytics.html %}{% endif %}
   {% if page.schema %}
