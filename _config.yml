@@ -1,0 +1,49 @@
+## Jekyll configs
+markdown: rdiscount
+permalink: /:year/:month/:day/:title/
+highlighter: pygments
+rdiscount:
+  extensions: [smart]
+sass:
+  style: :compressed
+gems:
+  - jemoji
+
+## Site structure
+collections:
+  testimonials:
+    output: true
+    permalink: /testimonials/:title/
+  autopages:
+    output: true
+    permalink: /:title/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "autopages"
+    values:
+      layout: "autopage"
+  -
+    scope:
+      path: ""
+      type: "testimonials"
+    values:
+      layout: "testimonial"
+
+## Basic site info
+title: Smith and Partners
+primary_author: "Smith and Partners, LLC."
+shortname: Smith
+baseurl: http://www.smith-and-partners.com
+email: info@smith-and-partners.com 
+phone: (248) 957-1080
+# gaid: UA-12803971-1
+
+## Open Graph
+og_street_address: 25727 Castlereigh Dr
+og_locality: Farmington Hills
+og_region: MI
+og_postal_code: "48336"
+og_country: USA

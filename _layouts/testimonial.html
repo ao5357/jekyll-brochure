@@ -1,0 +1,15 @@
+---
+layout: layout
+regions:
+  contact: true
+---
+<article class="region" itemscope itemtype="http://schema.org/Article"><div class="inner">
+	<header>
+		<h1 itemprop="name headline">{{ page.title }}</h1>
+    <h2>&#8220;{{ page.tagline }}&#8221;</h2>
+	</header>
+  {% if page.image %}<img class="right" src="/images/testimonials/{{ page.image }}" alt="" />{% endif %}
+	<div itemprop="articleBody">
+		{{ content }}
+	</div>
+</div></article>

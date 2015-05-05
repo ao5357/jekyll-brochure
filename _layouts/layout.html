@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#"><head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0" />
+{% if page.front %}
+  <title>{{ site.title }}</title>
+{% else %}
+  <title>{{ page.title }} | {{ site.title }}</title>
+{% endif %}
+<meta name="apple-mobile-web-app-title" content="{{ site.shortname }}" />
+<meta name="author" content="{{ site.primary_author }}" />
+<meta property="og:country-name" content="{{ site.og_country }}"/>
+<meta property="og:email" content="{{ site.email }}"/>
+<meta property="og:image" content="{{ site.baseurl }}/apple-touch-icon.png" />
+<meta property="og:locality" content="{{ site.og_locality }}"/>
+<meta property="og:phone_number" content="{{ site.phone }}"/>
+<meta property="og:postal-code" content="{{ site.og_postal_code }}"/>
+<meta property="og:region" content="{{ site.og_region }}"/>
+<meta property="og:site_name" content="{{ site.title }}" />
+<meta property="og:street-address" content="{{ site.og_street_address }}"/>
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ site.baseurl }}/{{ page.url }}" />
+<link rel="stylesheet" type="text/css" href="/deps/styles.css" />
+</head><body class="page-{{ page.url | slugify }}">
+{% include analytics.html %}
+<div class="page" itemscope itemtype="http://schema.org/LocalBusiness">
+  {% include header.html %}
+  {% include nav.html %}
+  {% if page.regions.splash %}{% include splash.html %}{% endif %}
+	{{ content }}
+  {% if page.regions.contact %}{% include contact.html %}{% endif %}
+  {% if page.regions.blog %}{% include blog.html %}{% endif %}
+  {% if page.regions.cta %}{% include cta.html %}{% endif %}
+  {% if page.regions.testimonials %}{% include testimonials.html %}{% endif %}
+  {% include footer.html %}
+</div>
+</body></html>

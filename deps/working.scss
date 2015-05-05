@@ -1,0 +1,976 @@
+/* Colors */
+@function hex-add($color, $step) {
+  @return rgb(
+    (red($color) + ($step * 17)),
+    (green($color) + ($step * 17)),
+    (blue($color) + ($step * 17))
+  );
+}
+$primary: #014;
+$secondary: #f41;
+$tertiary: #7c1;
+$quarternary: #04f;
+$text: #002;
+$light: #fff;
+
+@font-face {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/fontello.eot');
+  src: url('fonts/fontello.eot?#iefix') format('embedded-opentype'),
+    url('fonts/fontello.woff') format('woff');
+}
+@font-face {
+  font-family: 'gentium';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/gentium.eot');
+  src: url('fonts/gentium.eot?#iefix') format('embedded-opentype'),
+    url('fonts/gentium.woff2') format('woff2'),
+    url('fonts/gentium.woff') format('woff');
+}
+@font-face {
+  font-family: 'gentium';
+  font-style: italic;
+  font-weight: normal;
+  src: url('fonts/gentium-i.eot');
+  src: url('fonts/gentium-i.eot?#iefix') format('embedded-opentype'),
+    url('fonts/gentium-i.woff2') format('woff2'),
+    url('fonts/gentium-i.woff') format('woff');
+}
+@font-face {
+  font-family: 'gentium';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/gentium-b.eot');
+  src: url('fonts/gentium-b.eot?#iefix') format('embedded-opentype'),
+    url('fonts/gentium-b.woff2') format('woff2'),
+    url('fonts/gentium-b.woff') format('woff');
+}
+@font-face {
+  font-family: 'lato';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/lato.eot');
+  src: url('fonts/lato.eot?#iefix') format('embedded-opentype'),
+    url('fonts/lato.woff') format('woff');
+}
+@font-face {
+  font-family: 'lato';
+  font-style: italic;
+  font-weight: normal;
+  src: url('fonts/lato-i.eot');
+  src: url('fonts/lato-i.eot?#iefix') format('embedded-opentype'),
+    url('fonts/lato-i.woff') format('woff');
+}
+@font-face {
+  font-family: 'lato';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/lato-b.eot');
+  src: url('fonts/lato-b.eot?#iefix') format('embedded-opentype'),
+    url('fonts/lato-b.woff') format('woff');
+}
+
+
+/**
+ * Fixes from normalize.css
+ */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+
+/*--Type Selectors--*/
+/*-Body-*/
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  overflow-y: scroll;
+}
+html, button, input, select, textarea {
+  font-family: sans-serif;
+}
+body {
+  background: $light;
+  color: $text;
+  font-family: 'lato', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.45;
+  margin: 0;
+  /* Text wrapping and hyphens */
+  word-wrap: break-word;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+/*-Link-*/
+a:link {
+  color: $quarternary;
+}
+a:visited, a.visited {
+  color: hex-add($primary, 1);
+}
+a:hover, a.hover {
+  color: $secondary;
+}
+a:active, a.a-active {
+  color: $secondary;
+}
+a:focus, a.focus {
+  outline: thin dotted;
+}
+
+:target {
+  background: hex-add($light, -.35);
+  box-shadow: 0 0 0 10px hex-add($light, -.35);
+}
+
+/*-List-*/
+ol {
+  margin-left: 0;
+  padding: 0;
+}
+ul {
+  margin-left: 0;
+  padding: 0 0 0 40px;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+
+/*-Heading-*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'gentium', Georgia, serif;
+}
+h1 {
+  color: hex-add($primary, 1);
+  font-size: 2.8em;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0.67em 0 0;
+}
+  h1.site-name {
+    margin: 0;
+  }
+  @media all and (max-width: 400px) {
+    h1 {
+      font-size: 1.8em;
+    }
+  }
+h2 {
+  color: $secondary;
+  font-size: 2.375em;
+  font-weight: normal;
+  line-height: 1;
+  margin: 1.75em 0 .25em;
+}
+h3 {
+  color: hex-add($primary, 1);
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: .065em;
+  margin: 1.5em 0 .25em;
+}
+  h2 + h3 {
+    margin-top: 0;
+  }
+h4 {
+  color: $secondary;
+  font-size: 1.65em;
+  font-weight: normal;
+  margin: 1.33em 0 0;
+}
+h5 {
+  color: hex-add($primary, 1);
+  border-bottom: 1px solid;
+  font-size: 1.2em;
+  font-weight: normal;
+  margin: 1.67em 0 0;
+}
+h6 {
+  color: $secondary;
+  font-size: 0.9em;
+  font-weight: normal;
+  margin: 2.33em 0 0;
+}
+
+/*-Form-*/
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  max-width: 80%;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+  button, input {
+    line-height: normal;
+  }
+  /* Hint: CSS3 Gradients can be applied if desired */
+  button, input[type="button"], input[type="reset"], input[type="submit"], .button {
+    background: $secondary;
+    border: 0 none;
+    border-radius: 5px;
+    color: $light;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 .5em 0 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    *overflow: visible;
+  }
+    a.button:link, a.button:visited {
+      color: $light;
+    }
+    button:hover,
+    input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover,
+    .button:hover, .b-hover {
+      background: $quarternary;
+    }
+    button:active,
+    input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active,
+    .button:active, .b-active {
+      color: $quarternary;
+    }
+    button:focus,
+    input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus,
+    .button:focus, .b-focus {
+      outline: 1px dashed hex-add($light, -1);
+    }
+    button[disabled], input[disabled] {
+      cursor: default;
+    }
+      button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, 
+      input[type="submit"]:disabled, .button:disabled, .b-disabled {
+        background: hex-add($light, -1);
+        color: $text;
+      }
+
+/*-Table-*/
+table {
+  border-collapse: collapse;
+  border-bottom: 1px solid hex-add($light, -1);
+  border-left: 1px solid hex-add($light, -1);
+  border-spacing: 0;
+}
+  caption {
+    border-color: hex-add($light, -1);
+    border-style: solid;
+    border-width: 1px 1px 0 1px;
+    font-size: .75em;
+    padding: .25em 1em;
+    text-align: left;
+  }
+  thead {
+    background: $quarternary;
+    border-left: 1px solid $quarternary;
+    border-right: 1px solid $quarternary;
+    color: $light;
+    font-weight: bold;
+    letter-spacing: .065em;
+  }
+    th {
+      border-right: 1px solid hex-add($light, -1);
+      border-bottom: 1px solid hex-add($light, -1);
+      padding: .25em 1em;
+    }
+  tbody {}
+    tbody > tr:hover {
+      background: hex-add($light, -1);
+    }
+    tbody > tr:nth-child(even) {
+      background: hex-add($light, -.35);
+    }
+    td {
+      border-right: 1px solid hex-add($light, -1);
+      border-bottom: 1px solid hex-add($light, -1);
+      padding: .25em 1em;
+    }
+
+/*-Other-*/
+abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+  white-space: nowrap;
+}
+address{
+  font-style: italic;
+}
+aside {
+  background: hex-add($light, -.35);
+  border: 1px solid hex-add($light, -1);
+  font-size: .75em;
+  margin: 1.5em 0;
+  padding: 0 10px;
+}
+b, strong {
+  font-weight: bold;
+  letter-spacing: .065em;
+}
+blockquote {
+  font-style: italic;
+  margin: 1em 40px;
+}
+dfn {
+  font-style: italic;
+}
+embed, img, object {
+  max-width: 100%;
+}
+  img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+  }
+header {}
+  header h2 {
+    font-size: 1.75em;
+    font-style: italic;
+    margin: 0 0 .25em;
+  }
+hr {
+  background-color: hex-add($light, -1);
+  border-width: 0;
+  color: hex-add($light, -1);
+  height: 1px;
+  line-height: 0;
+  margin: 1.5em 0;
+}
+mark {
+  background: hex-add($primary, 2);
+  color: $light;
+}
+p {
+  margin: 1.5em 0;
+}
+pre, code, kbd, samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: none;
+}
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+small {
+  font-size: 75%;
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/*--Classes/Roles--*/
+.captioned {
+  position: relative;
+}
+  .caption {
+    background: hex-add($primary, 2);
+    color: $light;
+    padding: 5px;
+  }
+  .captioned .caption {
+    background: rgba(hex-add($primary,1),.5);
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-shadow: rgba(hex-add($primary,1),.5);
+    top: 61%;
+  }
+    .captioned .caption > .inner {
+      margin: 0 auto;
+      max-width: 80%;
+    }
+    .caption address {
+      font-style: normal;
+    }
+    .captioned > .map:hover > .caption {
+      background: rgba(hex-add($primary,1),.85);
+    }
+.cards {
+  list-style: none;
+  margin: 5px 0 0;
+  overflow: hidden;
+  padding: 0;
+}
+  .card {
+    border: 1px solid hex-add($light, -1);
+    border-radius: 2px;
+    float: left;
+    box-shadow: 0 2px 5px 0 rgba($text,.16), 0 2px 10px 0 rgba($text,.12);
+    margin: 0 5px 5px 0;
+    padding: 0 5px;
+  }
+    .card:hover {
+      background: hex-add($light, -.35);
+    }
+    .card h3 {
+      border-bottom: 1px solid hex-add($light, -1);
+      color: hex-add($text, 6);
+      font-size: 1.7em;
+      margin: 0;
+    }
+    .card p {
+      margin: .5em 0;
+    }
+.class-brief {
+  border-bottom: 1px solid hex-add($light, -1);
+  overflow: hidden;
+  padding: 1em 0;
+}
+  .class-brief:last-child {
+    border-bottom: 0 none;
+  }
+  .class-brief h2 {
+    margin-top: 0;
+  }
+  .class-brief img {
+    max-width: 180px;
+  }
+.clear {
+  clear: both;
+  display: block;
+}
+.divided {
+  border-bottom: 1px solid hex-add($light, -1);
+}
+  .divided.last {
+    border-bottom: 0 none;
+  }
+.float {}
+  .left {
+    box-shadow: 0 0 2px rgba($text,.25);
+    float: left;
+    margin: 0 1.5em 1.5em 0;
+  }
+  .right {
+    box-shadow: 0 0 2px rgba($text,.25);
+    float: right;
+    margin: 0 0 1.5em 1.5em;
+  }
+.grid {}
+  .grid h3 {
+    clear: both;
+  }
+  .grid-item {
+    float: left;
+    margin: 0 2% 20px 0;
+    overflow: hidden;
+    padding: 0 1%;
+  }
+    .grid-last {
+      margin-right: 0;
+    }
+    .one-third {
+      width: 30%;
+    }
+    .two-thirds {
+      width: 64%;
+    }
+.hide, .element-invisible {
+  display: none;
+}
+  .away {
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+  }
+.highlight {
+  background: hex-add($light, -1);
+}
+  .highlight a.button {
+    background-color: $tertiary;
+    color: hex-add($primary, 1);
+  }
+    .highlight a.button:hover {
+      background-color: $secondary;
+      color: $light;
+    }
+  .highlight h2 {
+    margin-top: .2em;
+  }
+.icon {}
+  .icon:before {
+    color: hex-add($primary, 2);
+    content: 'a';
+    display: inline-block;
+    font-family: 'fontello';
+    font-size: 16px;
+    min-width: 1em;
+    padding: 0 10px 0 0;
+  }
+    .icon.email:before {
+      content: '\2709';
+    }
+    .icon.tel:before {
+      content: '\1F4DE';
+    }
+ul.inline {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+  .inline > li {
+    display: inline-block;
+  }
+    .inline > li > a {
+      display: inline-block;
+      margin: 0 20px 20px 0;
+      padding: 5px 10px;
+    }
+      .inline > li > a:hover {
+        background: hex-add($light, -.35);
+      }
+.inline-block {
+  display: inline-block;
+  margin: 0 20px 0 0;
+  vertical-align: text-top;
+}
+.last-col {
+  margin-right: 0;
+}
+.list-no {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+  .menu > li {
+    float: left;
+  }
+    .menu > li > a {
+      color: $light;
+      display: inline-block;
+      font-weight: bold;
+      letter-spacing: .065em;
+      padding: 1em 2em;
+      text-decoration: none;
+    }
+      .menu > li > a:hover {
+        background-color: hex-add($primary, 3);
+        color: $tertiary;
+      }
+      .menu > li > a.first {
+        margin: 0 0 0 -2em;
+      }
+      .menu > li > a.active {
+        color: $tertiary;
+      }
+.print-break {
+  page-break-before: always;
+}
+.separator {
+  border-bottom: 1px solid;
+}
+.smaller {
+  font-size: .75em;
+}
+.social {
+  margin-bottom: 20px;
+}
+  .social a[href] {
+    color: transparent;
+    display: inline-block;
+    font-size: 0px;
+    font-style: normal;
+  }
+    .social a[href]:before {
+      color: hex-add($light, -14);
+      content: 'a';
+      display: block;
+      font-family: 'fontello';
+      font-size: 24px;
+      min-width: 1em;
+      padding: 10px 12px;
+    }
+      .social a[href]:hover:before {
+        background-color: hex-add($light, -10);
+        color: $light;
+      }
+  .social a[href^="mailto:"]:before {
+    content: '\2709';
+  }
+  .social a[href*="delicious.com"]:before {
+    color: #31a9ff;
+    content: '\1f67e';
+  }
+  .social a[href*="facebook.com"]:before {
+    color: #3b5998;
+    content: '\192';
+  }
+  .social a[href*="flickr.com"]:before {
+    color: #ff0084;
+    content: '\2824';
+  }
+  .social a[href*="github.com"]:before {
+    color: #333;
+    content: '\1f419';
+  }
+  .social a[href*="google.com"]:before {
+    color: #dd4b39;
+    content: '\261';
+  }
+  .social a[href*="instagram.com"]:before {
+    color: #3f729b;
+    content: '\1f4f8';
+  }
+  .social a[href*="linkedin.com"]:before {
+    color: #007bb6;
+    content: '\1f13b';
+  }
+  .social a[href*="meetup.com"]:before {
+    color: #e0393e;
+    content: '\2133';
+  }
+  .social a[href*="pinterest.com"]:before {
+    color: #cb2027;
+    content: '\2118';
+  }
+  .social a[href*="reddit.com"]:before {
+    color: orangered;
+    content: '\1f47d';
+  }
+  .social a[href*="rss"]:before {
+    color: #ee802f;
+    content: '\2a9c';
+  }
+  .social a[href*="twitter.com"]:before {
+    color: #00aced;
+    content: '\1f426';
+  }
+  .social a[href*="vimeo.com"]:before {
+    color: #aad450;
+    content: '\24b1';
+  }
+  .social a[href*="yelp.com"]:before {
+    color: #a00;
+    content: '\2837';
+  }
+  .social a[href*="youtube.com"]:before {
+    color: #b00;
+    content: '\6898';
+  }
+.tagline {
+  color: $light;
+  display: block;
+  font-size: 3em;
+  font-size: 3vw;
+  font-weight: bold;
+  letter-spacing: .03em;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 2px 2px 1px rgba(hex-add($primary,1),.5);
+}
+.title {
+  margin-top: 0;
+}
+  .title a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+    .title a:hover {
+      text-decoration: underline;
+    }
+
+/*--Structure--*/
+.page {
+  margin: 0;
+  padding: 0;
+}
+  @media all and (max-width: 960px) {
+    .page {
+      margin: 0;
+    }
+  }
+
+.region {
+  clear: both;
+  padding: 0;
+}
+  .region > .inner {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 20px 0;
+    width: 960px;
+  }
+    .region > .inner:after {
+      clear: both;
+      content: ' ';
+      display: table;
+    }
+  @media screen and (min-width: 1px) {
+    .region > .inner {
+      width: inherit;
+    }
+  }
+  @media screen and (max-width: 960px) {
+    .region {
+      padding: 0 20px;
+    }
+  }
+
+header.region {
+  background-color: hex-add($primary, 1);
+}
+  header.region a.button {
+    background-color: $tertiary;
+    border-radius: 1.2em;
+    color: hex-add($primary, 1);
+  }
+    header.region a.button:hover {
+      background-color: $secondary;
+      color: $light;
+    }
+  .actions {
+    float: right;
+    margin: 15px 0 0 20px;
+  }
+  .logo-link {
+    display: block;
+    float: left;
+    margin: 5px 20px 0 0;
+  }
+nav.region {
+  background-color: hex-add($primary, 2);
+  box-shadow: 0 2px 2px rgba(hex-add($primary,1),.5);
+  position: relative;
+  z-index: 1;
+}
+  nav.region > .inner {
+    padding: 0;
+  }
+section.region {}
+  section.region > .inner {
+    padding: 2em 0;
+  }
+    section.region > .inner p:last-child {
+      margin-bottom: 0;
+    }
+  section.region .right {
+    margin-bottom: 0;
+  }
+.splash {
+  background: hex-add($light, -1) url('images/splash.png') top left scroll no-repeat;
+  background-size: cover;
+  color: $light;
+  min-height: 145px;
+  min-height: 35vw;
+  position: relative;
+  z-index: 0;
+}
+  .splash .list-no {
+    background-color: $quarternary;
+    background-color: rgba($quarternary,.8);
+    border-radius: 2px;
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 15em;
+    text-align: center;
+  }
+    .splash .list-no > li {
+      display: inline-block;
+      margin: 0 20px 0 0;
+    }
+      .splash .list-no > li.last {
+      margin: 0;
+    }
+  .splash .tagline {
+    margin: 2.5em 0 .5em;
+    margin-top: 18vw;
+  }
+.region-cta {
+  background: hex-add($light, -1) url('images/cta.jpg') top left scroll no-repeat;
+  background-size: cover;
+  color: $light;
+  min-height: 145px;
+  min-height: 24vw;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+  section.region-cta > .inner {
+    background: hex-add($primary, 1);
+    background: rgba($primary,.7);
+    color: #fff;
+    margin: 40px auto;
+    max-width: 30em;
+    padding: 1em;
+  }
+  .region-cta h2 {
+    margin-top: 0;
+  }
+.pre-footer {
+  background-color: hex-add($primary, 2);
+  margin: 2em 0 0;
+  padding: .3em 0 .65em;
+}
+  .pre-footer form {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+    .pre-footer button {
+      vertical-align: bottom;
+    }
+    .pre-footer input {
+      font-size: 1.25em;
+      padding: .4em 0 .1em .2em;
+    }
+  .pre-footer h2 {
+    color: $light;
+    display: inline-block;
+    margin: 0 20px 0 0;
+  }
+footer.region {
+  background-color: hex-add($light, -11);
+  padding: 25px 0 0;
+}
+  footer.region > .inner > div {
+    float: left;
+    margin: 0 20px 20px 0;
+  }
+    footer.region .location {
+      background: transparent url('/images/map.png') top left scroll no-repeat;
+      background-size: cover;
+      height: 240px;
+      min-width: 170px;
+      width: 43vw;
+    }
+      footer.region .location > .map {
+        display: block;
+        height: 240px;
+        position: relative;
+      }
+      @media all and (min-width: 960px) {
+        footer.region .location {
+          width: 625px;
+        }
+      }
+    footer.region .social {
+      text-align: right;
+    }
+  footer.region .menu > li {
+    float: none;
+  }
+    footer.region .menu > li > a {
+      display: block;
+      margin: 0 0 0 -2em;
+      min-width: 7em;
+    }
+      footer.region .menu > li > a:hover {
+        background-color: hex-add($light, -10);
+      }
+      footer.region .menu > li > a.first {
+        margin-top: -1em;
+      }
+.copyright {
+  background-color: hex-add($light, -12);
+  color: hex-add($light, -5);
+  font-size: .85em;
+}
+  .copyright a {
+    color: hex-add($light, -5);
+  }
+  .copyright p {
+    margin: 0;
+  }
+  .affiliations {}
+  .affiliations a {
+    display: inline-block;
+    margin: 20px 20px 0 0;
+  }
+  .affiliations img {
+    max-height: 75px;
+  }
+  
+  .testimonial-brief {
+    background: hex-add($light, -1);
+    border: 0;
+    margin: 1em 0 3em;
+    padding: 1em;
+    position: relative;
+  }
+    .testimonial-brief:before {
+      border-color: hex-add($light, -1) transparent;
+      border-style: solid;
+      border-width: 20px 20px 0;
+      bottom: -20px;
+      content: "";
+      display: block;
+      left: 10%;
+      position: absolute;
+      width: 0;
+    }
+      .testimonial-brief:nth-child(odd):before {
+        left: 80%;
+      }
+    .testimonial-brief:after {
+      clear: both;
+      content: ' ';
+      display: table;
+    }
+    .testimonial-brief:nth-child(odd) {
+      text-align: right;
+    }
+    .testimonial-brief a {
+      color: hex-add($light, -10);
+      text-decoration: none;
+    }
+      .testimonial-brief a:hover {
+        color: $secondary;
+      }
+    .testimonial-brief h2 {
+      margin: 0;
+    }   
+    .testimonial-brief img {
+      box-shadow: 0 0 2px rgba($text,.25);
+      float: right;
+      margin: 0 0 0 1em;
+      max-width: 100px;
+    }
+      .testimonial-brief:nth-child(odd) img {
+        float: left;
+        margin: 0 1em 0 0;
+      }
+    .testimonial-brief p {
+      color: hex-add($light, -5);
+      margin: .25em 0;
+    }
